@@ -1,0 +1,22 @@
+# version: "3"
+# services:
+#  rabbitmq:
+#     image: "rabbitmq:3.8-management-alpine"
+#     container_name: producer-broker-rabbitmq
+#     hostname: rabbitmq
+#     ports:
+#       - "15672:15672"
+#       - "5672:5672"
+#     environment:
+#       - RABBITMQ_DEFAULT_USER=admin
+#       - RABBITMQ_DEFAULT_PASS=admin
+
+version: "3.2"
+services:
+  rabbitmq:
+    hostname: rabbitmq
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
+    ports:
+        - 5672:5672
+        - 15672:15672
